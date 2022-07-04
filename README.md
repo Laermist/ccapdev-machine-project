@@ -31,14 +31,18 @@ How to setup:
 8. In posts, select "ADD DATA" and choose "Import File"
 	- go to the project directory then misc
 	- select posts.json and import the data
-9. Open your command prompt and navigate to the project directory
-10. Run the following commands:
+9. Create another collection within GrowForum named "comments"
+10. In posts, select "ADD DATA" and choose "Import File"
+	- go to the project directory then misc
+	- select comments.json and import the data
+11. Open your command prompt and navigate to the project directory
+12. Run the following commands:
 	- npm install mongodb
 	- npm install mongoose
 	- npm install express
 	- npm install express-session
 	- npm install bcrypt
-11. Run "npm init" and then "node index.js" to run the app
+13. Run "npm init -y" and then "node index.js" to run the app
 
 Additional notes:
 
