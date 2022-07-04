@@ -82,8 +82,8 @@
 			<!--MIDDLE PART-->
 			<div class="middle">
 				<!--POST CREATION-->
-				<form class="entries create-post">
-					<textarea type="text" placeholder="What's growing on?"></textarea>
+				<form class="entries create-post" id="createPost">
+					<textarea type="text" id="txtArea" placeholder="What's growing on?"></textarea>
 					<div class="joint">
 						<!--FILTER-->
 						<div class="filter">
@@ -105,7 +105,7 @@
 								<option value="surgery">Surgery</option>
 							</select>
 						</div>
-						<input type="submit" value="Plant" class="plant">
+						<input type="button" onClick="addPost('Session')" value="Plant" class="plant">
 					</div>
 				</form>
 				
@@ -148,7 +148,7 @@
 						</div>
 						
 						<div class="fertilized"><p>{{likes}} Fertilized Seed</p></div>
-						<div class="comments text-muted"><a id="comment1" onClick="showComments('comment1')">View all {{comments}} comments</a></div>
+						<div class="comments text-muted"><a id="btnComment" onClick="showComments()">View all {{comments}} comments</a></div>
 					</div>
 					{{/each}}
 					{{/if}}
@@ -163,24 +163,12 @@
 					</div>
 
 					<div class="comment-bar">
-						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
-						<p>Ghosts exists now in the game!? Cool!!!</p>
-						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
-						<p>Ghosts exists now in the game!? Cool!!!</p>
-						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
-						<p>Ghosts exists now in the game!? Cool!!!</p>
-						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
-						<p>Ghosts exists now in the game!? Cool!!!</p>
-						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
-						<p>Ghosts exists now in the game!? Cool!!!</p>
-						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
-						<p>Ghosts exists now in the game!? Cool!!!</p>
-						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
-						<p>Ghosts exists now in the game!? Cool!!!</p>
-						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
-						<p>Ghosts exists now in the game!? Cool!!!</p>
-						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
-						<p>Ghosts exists now in the game!? Cool!!!</p>
+						{{#if Comments}}
+						{{#each Comments}}
+						<h4>{{username}}</h4><br>
+						<p>{{content}}</p><br><br><hr><br>
+						{{/each}}
+						{{/if}}
 					</div>
 
 				</div>
