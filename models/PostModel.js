@@ -8,7 +8,11 @@ var PostSchema = new mongoose.Schema({      //FOR EACH POST
     },
     userID:
 	{
-        type: Number        //details of the user whom this post belongs to
+        type: Number            //details of the user whom this post belongs to
+    },
+    username:
+    {
+        type: String            //the name of the poster
     },
     content:
 	{
