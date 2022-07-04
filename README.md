@@ -16,6 +16,7 @@
    
 
 *---Instructions on how to run the project locally---*
+
 How to setup:
 
 1. Download the entire repository
