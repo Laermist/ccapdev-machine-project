@@ -1,6 +1,7 @@
 const dotenv = require(`dotenv`);
 const express = require(`express`);
 const session = require(`express-session`);
+const cookieParser = require(`cookie-parser`);
 const hbs = require(`hbs`);
 const bodyParser = require(`body-parser`);
 const routes = require(`./routes/routes.js`);
@@ -8,28 +9,26 @@ const db = require(`./models/DML.js`);
 const ctrl = require(`./controllers/Controller.js`);
 
 const app = express();
+var sess;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set('trust proxy', 1);
+app.use(cookieParser());
+var oneday = 1000 * 60 * 60 * 24;       // one day
 app.use(session({
     secret: 'sikwet',
     resave: false,
     saveUninitialized: true,
-    cookie: {maxAge: 300000}
+    cookie: {maxAge: oneday}
 }));
+
 app.get('/home', function(req, res) {
-    if(req.session.views)
-    {
-        req.session.views++;
-        console.log('views: ' + req.session.views);
-        console.log('expires in: ' + (req.session.cookie.maxAge / 1000));
+    sess = req.session;
+    if(!sess.user){
+        return res.redirect(`/login`);
+    } else {
+        console.log("current user:",sess.user);
         ctrl.getMain(req.session,res);
     }
-    else
-    {
-        req.session.views = 1;
-        console.log('Welcome, your session will expire after 5 minutes. Refresh!');
-        res.end('Welcome, your session will expire after 5 minutes. Refresh!');
-    }   
 });
 
 app.set(`view engine`, `hbs`);
