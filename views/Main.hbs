@@ -28,7 +28,7 @@
 			</div>
 			<div class="create">
 				<a href="/profile" class="btn btn-primary" for="create-post">Profile</a>
-				<a href="/login" class="btn btn-primary" for="create-post">Log-out</a>
+				<a href="/logout" class="btn btn-primary" for="create-post">Log-out</a>
 			</div>
 		</div>
 	</nav>
@@ -112,107 +112,11 @@
 				
 				<!--ACTUAL POSTS-->
 				<div class="entries feeds">
-					<div class="feed">
-						<div class="head">
-							<div class="user">
-								<div class="info">
-									<h2>Madale Mods</h2>
-									<small>07/03/2022</small>
-								</div>
-								
-								<!--<span class="edit">
-									<span class="iconify" data-icon="dashicons:ellipsis"></span>
-								</span>-->
-
-								<div>
-									<select id="settings" class="settings">
-										<option value="..." selected>...</option>
-										<option value="delete">Delete Post</option>
-										<option value="edit">Edit Post</option>
-									</select>
-								</div>
-								
-							</div>
-						</div>
-						
-						<div class="caption">
-							<p class="message">
-								Hunting Ghost? <br>
-								Go NAGHOST!! <br>
-								No gaut ✅ <br>
-								No mag✅ <br>
-								Free link ✅ <br>
-								<br>
-								Hunting Ghost? <br>
-								Go EXTRAHAUNTED!! <br>
-								No gaut ✅ <br>
-								No mag✅ <br>
-								Free link ✅ <br>
-								Have Anti✅ <br>
-								Also Buying ecto farm 35 each <br>
-								======================= <br>
-								#FREE LINK DM ME! <br>
-								#NOGAUT <br>
-								#NOMAG
-							</p>
-						</div>
-						
-						<div class="photo">
-							<img src="/images/gtbday.png">
-						</div>
-						
-						<div class="action-button">
-							<div class="interaction-buttons">
-								<a href="#"><span class="iconify" data-icon="carbon:tree" data-width="30" data-height="30"></span></a>
-								<a href="#" id="button" onClick="action()"><span class="iconify" data-icon="ion:trail-sign-outline" data-width="30" data-height="30"></span></a>
-							</div>
-						</div>
-						
-						<div class="fertilized"><p>21 Fertilized Seed</p></div>
-						<div class="comments text-muted"><a href="#" id="comment1" onClick="showComments('comment1')">View all 12 comments</a></div>
-					</div>
-					
-					<div class="feed">
-						<div class="head">
-							<div class="user">
-								<div class="info">
-									<h2>Madale Mods</h2>
-									<small>07/03/2022</small>
-								</div>
-								
-								<!--<span class="edit">
-									<span class="iconify" data-icon="dashicons:ellipsis"></span>
-								</span>-->
-								<div>
-									<select id="settings" class="settings">
-										<option value="..." selected>...</option>
-										<option value="delete">Delete Post</option>
-										<option value="edit">Edit Post</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						
-						<div class="caption">
-							<p class="message">
-								Growtopia is a free-to-play sandbox MMO game with almost endless possibilities for world creation, customization and having fun with your friends. Enjoy thousands of items, challenges and events. 
-							</p>
-						</div>
-						
-						<div class="photo">
-							<img src="/images/tnc.jpg">
-						</div>
-						
-						<div class="action-button">
-							<div class="interaction-buttons">
-								<a href="#"><span class="iconify" data-icon="carbon:tree" data-width="30" data-height="30"></span></a>
-								<a href="#" id="button" onClick="action()"><span class="iconify" data-icon="ion:trail-sign-outline" data-width="30" data-height="30"></span></a>
-							</div>
-						</div>
-						
-						<div class="fertilized"><p>12 Fertilized Seed</p></div>
-						<div class="comments text-muted"><a href="#" id="comment2" onClick="showComments('comment2')">View all 33 comments</a></div>
-					</div>
+					{{#if Posts}}
+					{{#each Posts}}
+					{{>feed post=this}}
+					{{/each}}
+					{{/if}}
 				</div>
 			</div>
 
