@@ -41,6 +41,7 @@ How to setup:
 	- npm install mongoose
 	- npm install express
 	- npm install express-session
+	- npm install cookie-parser
 	- npm install bcrypt
 13. Run "npm init -y" and then "node index.js" to run the app
 
