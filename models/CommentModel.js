@@ -6,22 +6,22 @@ var CommentSchema = new mongoose.Schema({       //FOR EACH COMMENT/REPLY
     {
         type: Number            //unique ID for comment (format: user id + id of the post/comment that this replied to + comment id)
     },
-	userID:
-	{
-		type: Number        //details of the user who commented this
-	},
+    userID:
+    {
+	type: Number            //details of the user who commented this
+    },
+    username:
+    {
+        type: String            //the username of the poster
+    },
     postID:
     {
-        type: Number
+        type: Number            //the post being replied to
     },
     content:
-	{
-        type: String            //the actual comment or reply
-    },
-    replyToID:
     {
-        type: Number            //the ID of the post or comment that this new comment replied to
-    },
+        type: String            //the actual comment or reply
+    }
 });
 
 module.exports = mongoose.model('Comment', CommentSchema);
