@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#logForm').submit(function(){
+    $('button.btn-login').click(function(){
         console.log("Validating Login.");
         var entry = {
             email: $("#email").val(),
@@ -8,7 +8,8 @@ $(document).ready(function () {
         var pass = false;
         var id;
         
-        if(entry.email.trim().length==0 || entry.pword.trim().length==0 ){
+        if(entry.email.trim().length==0 || entry.pword.trim().
+        length==0 ){
             if(entry.email.trim().length==0) $("#email").css("border-color","red");
             if(entry.pword.trim().length==0) $("#pword").css("border-color","red");
             
@@ -18,7 +19,6 @@ $(document).ready(function () {
         else{
             alert("Authenticating");
             $.get('/getAcc', entry, function (result) {
-                console.log(result);
                 if(result)
                 {
                     if(result.message == "success")
