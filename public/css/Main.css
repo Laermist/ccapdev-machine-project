@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root{
+	--color-white: hsl(252, 30%, 100%);
+	--color-light: hsl(252, 30%, 95%);
+	--color-gray: hsl(252, 15%, 65%);
+	--color-primary: hsl(71, 39%, 14%);
+	--color-secondary: hsl(39, 77%, 83%);
+	--color-brown: hsl(46, 34%, 24%);
+	--color-black: hsl(252, 30, 10%);
+	
+	--border-radius: 2rem;
+	--card-border-radius: 1rem;
+	--btn-padding: 0.6rem 2rem;
+	--search-padding: 0.6rem 1rem;
+	--card-padding: 1rem;
+	
+	--sticky-top-left: 5rem;
+	--sticky-top-right: -18rem;
+}
+
+*, *::before, *::after{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	border: none;
+}
+
+body{
+	font-family: "Poppins", sans-serif;
+	color: var(--color-dark);
+	background: black;
+	overflow-x: hidden;
+}
+
+/*GENERAL STYLES*/
+.container{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.btn{
+	display: inline-block;
+	padding: var(--btn-padding);
+	font-weight: 500;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	transition: all 300ms ease;
+	font-size: 0.9rem;
+}
+
+.btn:hover{
+	opacity: 0.8;
+}
+
+.btn-primary{
+	background: var(--color-primary);
+	color: var(--color-secondary);
+}
+
+.text-bold{
+	font-weight: 500;
+}
+
+.text-muted{
+	color: var(--color-gray);
+}
+
+/************ NAV BAR ************/
+
+nav{
+	width: 100%;
+	background: -webkit-linear-gradient(rgb(68, 86, 81), rgb(21, 23, 22));
+	padding: 0.7rem 0;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+}
+
+nav .header{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+.profile-photo{
+	padding-left: 2rem;
+	width: 31rem;
+	line-height: 2rem;
+	vertical-align: middle;
+}
+
+img.logo{
+	display: inline-block;
+	width: 54px !important;
+	height: 54px !important;
+	vertical-align: middle;
+}
+
+nav .header .profile-photo h2{
+	display: inline-block;
+    vertical-align: middle;
+	color: var(--color-secondary);
+    font-family: 'Cormorant', serif;
+	font-size: 49px;
+}
+
+nav .searchbar{
+	background: var(--color-light);
+	border-radius: var(--border-radius);
+	padding: var(--search-padding);
+	width: 35rem;
+}
+
+nav .searchbar input[type="search"]{
+	background: transparent;
+	width: 30vw;
+	margin-left: 1rem;
+	font-size: 0.9 rem;
+	color: var(--color-dark);
+}
+
+nav .searchbar input[type="search"]::placeholder{
+	color: var(--color-gray);
+	
+}
+
+nav .create{
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	padding-right: 2rem;
+}
+
+/************ MAIN PAGE ************/
+main{
+	position: relative;
+	top: 4.2rem;/*5.4rem suggested*/
+}
+
+main .container{
+	display: grid;
+	grid-template-columns: 36vh auto 26vw;
+    column-gap: 4rem;
+	position: relative;
+}
+
+/************ MAIN PAGE: LEFT PART ************/
+main .container .left{
+	width: 100%;
+	padding-left: 2rem;
+	height: max-content;
+	position: -webkit-sticky; 
+	position: sticky;
+	top: var(--sticky-top-left);
+	color: var(--color-secondary);
+}
+
+.left .title h2{
+	font-size: 25px;
+	text-align: center;
+    background: rgba(82, 72, 14, 0.5);
+	border-radius: 0.7rem;
+	padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.left .sidebar{
+	font-size: 17px;
+	padding-left: 1rem;
+	padding-top: 1px;
+	margin-top: 1rem;
+	border-radius: var(--card-border-radius);
+	background: rgba(82, 72, 14, 0.5);
+}
+
+.left .sidebar dt{
+	margin-left: -1rem;
+}
+
+.left .sidebar h3{
+	margin: 7%;
+	text-align: center;
+}
+
+.left .sidebar .line{
+	color: var(--color-secondary);
+    border: 1px solid;
+	display: block;
+	width: 12.8rem;
+	height: 1px;
+	margin-left: 1rem;
+}
+
+/************ MAIN PAGE: MIDDLE PART ************/
+
+.middle .entries{
+	width: 100%;
+}
+
+/*FOR POSTING*/
+.middle .create-post{
+	/*display: flex;*/
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1rem;
+	background: var(--color-secondary);
+	padding: 0.4rem var(--card-padding);
+	border-radius: var(--card-border-radius);
+}
+
+
+.middle .create-post textarea[type="text"]{
+	width: 100%;
+	justify-self: start;
+	padding-left: 1rem;
+	padding-top: 0.7rem;
+	margin-top: 0.7rem;
+	background: rgb(242, 242, 217);
+    border-radius:  0.7rem;
+    height: 2.5cm;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.middle .create-post .joint{
+	display: flex;
+	justify-content: space-between;
+}
+
+.middle .create-post .joint .filter{
+	display: flex;
+	justify-content: space-between;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-indent: 1px;
+	text-overflow: '';
+}
+
+.middle .create-post .joint .filter p{
+	font-size: 20px;
+    padding: 10px;
+}
+
+.middle .create-post .joint .filter .sort{
+	background: var(--color-brown);
+    color: var(--color-white);
+    border-radius: 24px;
+	text-align: center;
+    font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.middle .create-post .plant{
+	padding: var(--btn-padding);
+	font-weight: 500;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	transition: all 300ms ease;
+	font-size: 0.9rem;
+	background-color: var(--color-brown);
+    color: white;
+	
+}
+
+.middle .create-post .plant:hover{
+	opacity: 0.8;
+}
+
+/*FOR THE ACTUAL POSTS*/
+
+.middle .feeds .feed{
+	background: var(--color-secondary);
+	border-radius: var(--card-border-radius);
+	padding: var(--card-padding);
+	margin: 1rem 0;
+	font-size: 0.85rem;
+	line-height: 1.5;
+	padding-left: 1rem;
+}
+
+.middle .feed .head{
+	display: flex;
+	justify-content: space-between;
+}
+
+.middle .feed .user{
+	display: flex;
+	gap: 1rem;
+}
+
+/*.middle .feed .edit{                          //for icon version of ellipsis
+	margin: 0.2rem -2rem 0 32rem;
+}*/
+
+.middle .feed .settings{
+	background: wheat;
+    color: var(--color-brown);
+    border-radius: 24px;
+	text-align: center;
+    font-size: 1rem;
+	font-weight: 500;
+    margin: 1px -15px 3px 581px;
+}
+
+.middle .feed .caption{
+	margin: 1rem 0 0 0;
+    color: sienna;
+
+}
+
+.middle .feed .photo{
+	border-radius: var(--card-border-radius);
+	margin: 0.7rem 0;
+}
+
+.middle .feed .photo img{
+	max-width: 600px;
+	max-height: 600px;
+	object-fit: contain;
+}
+
+.middle .feed .action-buttons{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.4 rem;
+	margin: 0.6 rem;
+}
+
+.middle .fertilized{
+	display: flex;
+}
+
+
+/*FOR THE COMMENTS SECTION : MODAL*/
+
+.add-comment{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.add-comment .popup{	
+	width: 500px;
+	height: 300px;
+	background-color: wheat;
+	border-radius: 1rem;
+}
+
+.popup input{
+	width: 50%;
+	display: block;
+	margin: 15px auto;
+	position: relative;
+}
+
+.add-comment .popup .close{
+	position: absolute;
+	top: 16rem;
+    right: 35.6rem;
+	font-size: 33px;
+	cursor: pointer;
+
+}
+
+.popup .create-comment{
+	/*display: flex;*/
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 1rem;
+	background: var(--color-secondary);
+	padding: 0.4rem var(--card-padding);
+	border-radius: var(--card-border-radius);
+}
+
+.create-comment .splice{
+	display: inline-block;
+	padding: var(--btn-padding);
+	font-weight: 500;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	transition: all 300ms ease;
+	font-size: 0.9rem;
+	background-color: var(--color-brown);
+    color: white;
+	
+}
+
+.middle .create-comment .splice:hover{
+	opacity: 0.8;
+}
+
+
+/************ MAIN PAGE: RIGHT PART ************/
+
+main .container .right{
+	width: 100%;
+	padding-right: 3rem;
+	height: max-content;
+	position: -webkit-sticky; 
+	position: sticky;
+	top: var(--sticky-top-left);
+	color: var(--color-secondary);
+}
+
+.right .show .heading{
+	font-size: 18px;
+	text-align: center;
+    background: rgba(82, 72, 14, 0.5);
+	border-radius: var(--card-border-radius);
+	padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.right .comment-bar{
+	font-size: 16px;
+	padding: 1rem 1rem 1rem 1rem;
+	margin-top: 1rem;
+	border-radius: var(--card-border-radius);
+	background: rgba(82, 72, 14, 0.5);
+}
+
+/*SEARCH BAR*/
