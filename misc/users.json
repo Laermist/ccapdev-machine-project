@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "62c2ed9dbfa2ea45e0ee6b75"
+  },
+  "userID": 101,
+  "name": "MadaleMods",
+  "email": "madale@gmail.com",
+  "pword": "$2b$10$PexS2XbtcYliloRoJej2YOsusz817WOsAf2rZetPkZmFHOEdhSZfa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c2edb7bfa2ea45e0ee6b78"
+  },
+  "userID": 102,
+  "name": "Marvs202",
+  "email": "marvinsilvala@gmail.com",
+  "pword": "$2b$10$3y5HiT4WPxYeWWEJtvUXU.Q6aEOVCcP2xhqEe/5extinZlfzp9KFa",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c2edddbfa2ea45e0ee6b7b"
+  },
+  "userID": 103,
+  "name": "Laermist",
+  "email": "lea_aromin@gmail.com",
+  "pword": "$2b$10$kqBUyAYSYCkkC0NtvFLutOcKWicsp.5y1gblw.o9DU/beHd6Hmgze",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c2ee00bfa2ea45e0ee6b7e"
+  },
+  "userID": 104,
+  "name": "Daboding",
+  "email": "johnDavid@gmail.com",
+  "pword": "$2b$10$39as4fUOPzk/uEpOSzMYZe5ltyQEq.DNVU/XiWnRv2VlCI/EcDV8e",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c2ee1cbfa2ea45e0ee6b81"
+  },
+  "userID": 105,
+  "name": "FakeGuest",
+  "email": "rbx_guest@gmail.com",
+  "pword": "$2b$10$l3TZVzi2WKsOao6CsWoMqurcP2eh7PP4FBVat/jA7EZc3G4oUylsC",
+  "__v": 0
+}]

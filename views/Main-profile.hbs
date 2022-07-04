@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<title>Main Page</title>
+		
+		<link rel="stylesheet" type="text/css" href="/css/Main.css">
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap" rel="stylesheet">		
+		
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+		<script src="/js/Validation.js"></script>
+	</head>
+	
+	<body style="background-image: url(/images/main.jpg);
+				 background-size: cover;
+				 background-attachment: fixed;
+				 margin: 0px;font-family: 'Plus Jakarta Sans', sans-serif;">
+		<div class="topPart">
+			<a class="topNav" href="/login">Log-out<a>
+			<a class="topNav" href="/home">Home</a>
+			<table><tr>
+			<td><a href="/"><img src="/images/gtlogo2.png" class="logo"></img></a></td>
+			<td><label style="font-family: 'Cormorant', serif;;font-size:50px;color:wheat;padding:10px;display:block;">GROWTOPIA FORUM</label></td>
+			<td><input class="searchBar" type="text" placeholder="Search"></input></td>
+			</tr></table>
+		</div>
+		<!--Left Part: Information Section-->
+		<div class="leftPart">
+			<dt><h2>Categories</h2></dt>
+			<hr>
+			<dt><h3 style="margin:7%">Building</h3></dt>
+			<dd>
+				<input type="checkbox">Blocks</input><br/>
+				<input type="checkbox">Backgrounds</input><br/>
+				<input type="checkbox">Doors</input><br/>
+				<input type="checkbox">Signs</input><br/>
+			</dd>
+			<br/><hr>
+			<dt><h3 style="margin:7%">Clothing</h3></dt>
+			<dd>
+				<input type="checkbox">Hat</input><br/>
+				<input type="checkbox">Hair</input><br/>
+				<input type="checkbox">Face</input><br/>
+				<input type="checkbox">Shoulder</input><br/>
+				<input type="checkbox">Top</input><br/>
+				<input type="checkbox">Bottom</input><br/>
+				<input type="checkbox">Back</input><br/>
+				<input type="checkbox">Shoes</input><br/>
+			</dd>
+			<br/><hr>
+			<dt><h3 style="margin:7%">Consumables</h3></dt>
+			<dd>
+				<input type="checkbox">Food</input><br/>
+				<input type="checkbox">Paint</input><br/>
+				<input type="checkbox">Potions</input><br/>
+				<input type="checkbox">Tools</input><br/>
+			</dd>
+			<br/><hr>
+		</div>
+		
+		<!--Middle Part: User Posting Section-->
+		<div class="centerPart">
+			<div class="postbox">
+				<p>
+					<textarea type="text" class="growingOn" placeholder="What's growing on?"></textarea></br>
+					<input type="submit" value="Build">
+				</p>
+			</div>
+			<div class="userbox">
+				<div class="header">
+					<table><tr>
+						<td><h1 class="userhead">Madale Mods</h1></td>
+					<td>
+						<div id="menu-bar">
+							<div id="menu" onclick="menuOp()">
+								<div id="b1" class="bar"></div>
+								<div id="b2" class="bar"></div>
+								<div id="b3" class="bar"></div>
+							</div>
+								<ul class="nav" id="nav">
+									<li><a href="#">Edit Post</a></li>
+									<li><a href="#">Hide Post</a></li>
+									<li><a href="#">Delete Post</a></li>
+								</ul>
+						</div>
+						<script src="Settings.js"></script>
+					</td>
+					</tr></table>
+					
+					<div class="bottom">
+						<p class="message">
+							Hunting Ghost? <br>
+							Go NAGHOST!! <br>
+							No gaut ✅ <br>
+							No mag✅ <br>
+							Free link ✅ <br>
+							<br>
+							Hunting Ghost? <br>
+							Go EXTRAHAUNTED!! <br>
+							No gaut ✅ <br>
+							No mag✅ <br>
+							Free link ✅ <br>
+							Have Anti✅ <br>
+							Also Buying ecto farm 35 each <br>
+							======================= <br>
+							#FREE LINK DM ME! <br>
+							#NOGAUT <br>
+							#NOMAG
+						</p>
+						<p class="timestamp">
+							05/14/2022
+						</p>
+						<input type="submit" id="like1" class="reactButton" value="Like"></input>
+						<input type="submit" id="comment1" onClick="showComments('comment1')" class="reactButton" value="Comment"></input>
+						<p class="comment-count">
+							12 likes, 21 comments
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--Right Part:  Section-->
+		<div class="rightPart">
+			<dt><h2>Comments</h2></dt>
+			<hr>
+			<div id="comments">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

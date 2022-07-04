@@ -1,0 +1,134 @@
+/*Divs for spacing*/
+body{
+	font-family: 'Courier New';
+}
+
+.heading{
+	text-align: center;
+	padding-top: 30px;
+	font-size: large;
+}
+
+.userhead{
+	padding:30px;
+	font-size: large;
+}
+
+h2, h4{
+	text-align: center;
+}
+
+form{
+	width: 300px;
+	margin-left: 20px;
+}
+
+form input{
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border: 1px solid lightgray;
+	border-radius: 6px;
+	outline: none;
+}
+
+input[type="submit"]{
+	width: 300px;
+	height: 35px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border: none;
+	background-color: #534929;
+	color: white;
+	font-size: 18px;
+}
+
+input[type="submit"]:hover{
+	background-color: rgb(221, 196, 152);
+}
+
+p{
+	text-align: left;
+	padding: 5px 30px;
+	font-size: 15px;
+}
+
+/*Main Page*/
+.topPart{
+	background: -webkit-linear-gradient(rgb(68, 86, 81), rgb(21, 23, 22));
+	color: white;
+	height: 80px;
+}
+
+.logo{
+	width:69px;
+	height:69px;
+}
+
+.topNav{
+	float: right;
+	display: block;
+	padding: 27px;
+	text-align: center;
+	color: wheat;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+.topNav:hover{
+	background-color: rgb(43, 48, 21);
+	color: white;
+}
+
+.searchBar{
+	font-size: 15px;
+	color: white;
+	background-color: rgb(63, 60, 7);
+	border-color: white;
+	width: 430px;
+	height:30px;
+	border-radius: 50px;
+}
+
+::placeholder{
+	color: lightgrey;
+}
+
+.leftPart{
+	float: left;
+	width: 15%;
+	height: 340%;
+    background: rgba(82, 72, 14, 0.5);
+	color: wheat;
+
+}
+
+input[type="checkbox"]{
+	background: rgba(204, 204, 204, 0.5);
+}
+
+.centerPart{
+	float: left;
+	width: 60%;
+}
+
+.userbox{
+	width: 80%;
+	background-color: wheat;
+	margin: 7% 10%;
+	border-radius: 8px;
+}
+
+.reactButton{
+	margin:4.3%;
+}
+
+.rightPart{
+	float: left;
+	width: 25%;
+	height: 100%;
+	background: rgba(82, 72, 14, 0.5);
+	color: wheat;
+}
+
+/**/

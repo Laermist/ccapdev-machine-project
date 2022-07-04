@@ -1,0 +1,34 @@
+<div class="userBox">
+    <div class="header">
+        <table><tr>
+            <td><h1 class="userhead">{{name}}</h1></td>
+        <td>
+            <div id="menu-bar">
+                <div id="menu" onclick="menuOp()">
+                    <div id="b1" class="bar"></div>
+                    <div id="b2" class="bar"></div>
+                    <div id="b3" class="bar"></div>
+                </div>
+                    <ul class="nav" id="nav">
+                        <li><a href="#">Hide Post</a></li>
+                    </ul>
+            </div>
+            <script src="../controllers/Settings.js"></script>
+        </td>
+        </tr></table>
+        
+        <div class="bottom">
+            <p class="message">
+                {{content}}
+            </p>
+            <p class="timestamp">
+                {{date}}
+            </p>
+            <input type="submit" id="like1" class="reactButton" value="Like"></input>
+            <input type="submit" id="comment1" onClick="showComments('comment1')" class="reactButton" value="Comment"></input>
+            <p class="comment-count">
+                {{likes}} likes, {{comments}} comments
+            </p>
+        </div>
+    </div>
+</div>

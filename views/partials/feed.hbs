@@ -1,0 +1,35 @@
+<div class="feed">
+    <div class="head">
+        <div class="user">
+            <div class="info">
+                <h2>{{userID}}</h2>
+                <small>{{date}}</small>
+            </div>
+            
+            <span class="edit">
+                <span class="iconify" data-icon="dashicons:ellipsis"></span>
+            </span>
+            
+        </div>
+    </div>
+    
+    <div class="caption">
+        <p class="message">
+            {{content}}
+        </p>
+    </div>
+    
+    <div class="photo">
+        <img src="../public/images/gtimg.jpg">
+    </div>
+    
+    <div class="action-button">
+        <div class="interaction-buttons">
+            <span class="iconify" data-icon="carbon:tree" data-width="30" data-height="30"></span>
+            <span class="iconify" data-icon="ion:trail-sign-outline" data-width="30" data-height="30"></span>
+        </div>
+    </div>
+    
+    <div class="fertilized"><p>{{likes}} Fertilized Seed</p></div>
+    <div class="comments text-muted"><a id="comment1" onClick="showComments('comment1')">View all {{comments}} comments</a></div>
+</div>

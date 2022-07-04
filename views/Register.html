@@ -1,0 +1,37 @@
+<html>
+
+<head>
+	<title>Register</title>
+	
+	<link rel="stylesheet" type="text/css" href="../public/css/Register.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script src="../public/js/Validation.js"></script>
+</head>
+
+<body style="background-image: url(../public/images/gtbg.jpg);
+			 background-size: cover;">
+	<br/>
+	<center><a href="/"><img src="../public/images/gtLogo.png"></img></a></center>
+	<br/>
+	<div class="box">
+		<h1>Sign Up</h1>
+		
+		<form onSubmit="return validateReg()" action="Login.hbs">
+			<label>Username</label>
+			<input type="text" id="uname" placeholder="Username" onClick="this.style.borderColor='';">
+			<label>Email</label>
+			<input type="email" id="email" placeholder="Email" onClick="this.style.borderColor='';">
+			<label>Password</label>
+			<input type="password" id="pwrd1" placeholder="Password" onClick="this.style.borderColor='';">
+			<label>Confirm Password</label>
+			<input type="password" id="pwrd2" placeholder="Password" onClick="this.style.borderColor='';">
+			<input type="submit" value="Submit">
+		</form>
+		<p>By clicking the Submit button, you agree to our <a href="/terms">Terms and Conditions</a>.</p>
+	</div>
+	<br/>
+	<p class="p2">Already have an account? <a href="Login.hbs">Login here </a></p>
+</body>
+
+
+</html>

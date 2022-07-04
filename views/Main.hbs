@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Newsfeed</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script src="/js/Validation.js"></script>
+	<script src="/js/Main.js"></script>
+</head>
+
+<body> <!--style="background-image: url(gtbg.png);
+			background-attachment: fixed;">-->
+	
+	<!--TOP PART: NAVIGATION BAR-->
+	<nav>
+		<div class="header">
+			<div class="profile-photo">
+				<img class="logo" src="/images/gtlogo2.png">
+				<h2>
+					GROWTOPIA FORUM
+				</h2>
+			</div>
+			
+			<div class="searchbar">
+				<span class="iconify-inline" data-icon="akar-icons:search"></span>
+				<input type="search" placeholder="Search for a growtopian">
+			</div>
+			<div class="create">
+				<a href="/profile" class="btn btn-primary" for="create-post">Profile</a>
+				<a href="/login" class="btn btn-primary" for="create-post">Log-out</a>
+			</div>
+		</div>
+	</nav>
+	
+	<!--MAIN PAGE-->
+	<main>
+		<div class="container">
+			<!--LEFT PART-->
+			<div class="left">
+				<a class="title">
+					<h2>Categories</h2>
+				</a>
+				
+				<div class="sidebar">
+					<dt><h3>Building</h3></dt>
+					<dd>
+						<input type="checkbox">Blocks</input><br/>
+						<input type="checkbox">Seeds</input><br/>
+					</dd><br/>
+					
+					<dt><div class="line"/></dt>
+					
+					<dt><h3>Clothing</h3></dt>
+					<dd>
+						<input type="checkbox">Head</input><br/>
+						<input type="checkbox">Torso</input><br/>
+						<input type="checkbox">Legs</input><br/>
+						<input type="checkbox">Shoes</input><br/>
+					</dd><br/>
+					
+					<dt><div class="line"/></dt>
+					
+					<dt><h3>Consumables</h3></dt>
+					<dd>
+						<input type="checkbox">Food</input><br/>
+						<input type="checkbox">Potions</input><br/>
+						<input type="checkbox">Tools</input><br/>
+					</dd><br/>
+
+					<dt><div class="line"/></dt>
+
+					<dt><h3>Activities</h3></dt>
+					<dd>
+						<input type="checkbox">Farming</input><br/>
+						<input type="checkbox">Fishing</input><br/>
+						<input type="checkbox">Startopia</input><br/>
+						<input type="checkbox">Surgery</input><br/>
+					</dd><br/>
+				</div>
+			</div>
+			
+			<!--MIDDLE PART-->
+			<div class="middle">
+				<!--POST CREATION-->
+				<form class="entries create-post">
+					<textarea type="text" placeholder="What's growing on?"></textarea>
+					<div class="joint">
+						<!--FILTER-->
+						<div class="filter">
+							<p><strong>Filter: </strong></p>
+							<select id="filter" class="sort">
+								<option value="all" selected>All</option>
+								<option value="blocks">Blocks</option>
+								<option value="seeds">Seeds</option>
+								<option value="head">Head</option>
+								<option value="torso">Tprso</option>
+								<option value="legs">Legs</option>
+								<option value="shoes">Shoes</option>
+								<option value="food">Food</option>
+								<option value="potions">Potions</option>
+								<option value="tools">Tools</option>
+								<option value="farming">Farming</option>
+								<option value="fishing">Fishing</option>
+								<option value="startopia">Startopia</option>
+								<option value="surgery">Surgery</option>
+							</select>
+						</div>
+						<input type="submit" value="Plant" class="plant">
+					</div>
+				</form>
+				
+				<!--ACTUAL POSTS-->
+				<div class="entries feeds">
+					<div class="feed">
+						<div class="head">
+							<div class="user">
+								<div class="info">
+									<h2>Madale Mods</h2>
+									<small>07/03/2022</small>
+								</div>
+								
+								<!--<span class="edit">
+									<span class="iconify" data-icon="dashicons:ellipsis"></span>
+								</span>-->
+
+								<div>
+									<select id="settings" class="settings">
+										<option value="..." selected>...</option>
+										<option value="delete">Delete Post</option>
+										<option value="edit">Edit Post</option>
+									</select>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="caption">
+							<p class="message">
+								Hunting Ghost? <br>
+								Go NAGHOST!! <br>
+								No gaut ✅ <br>
+								No mag✅ <br>
+								Free link ✅ <br>
+								<br>
+								Hunting Ghost? <br>
+								Go EXTRAHAUNTED!! <br>
+								No gaut ✅ <br>
+								No mag✅ <br>
+								Free link ✅ <br>
+								Have Anti✅ <br>
+								Also Buying ecto farm 35 each <br>
+								======================= <br>
+								#FREE LINK DM ME! <br>
+								#NOGAUT <br>
+								#NOMAG
+							</p>
+						</div>
+						
+						<div class="photo">
+							<img src="/images/gtbday.png">
+						</div>
+						
+						<div class="action-button">
+							<div class="interaction-buttons">
+								<a href="#"><span class="iconify" data-icon="carbon:tree" data-width="30" data-height="30"></span></a>
+								<a href="#" id="button" onClick="action()"><span class="iconify" data-icon="ion:trail-sign-outline" data-width="30" data-height="30"></span></a>
+							</div>
+						</div>
+						
+						<div class="fertilized"><p>21 Fertilized Seed</p></div>
+						<div class="comments text-muted"><a href="#" id="comment1" onClick="showComments('comment1')">View all 12 comments</a></div>
+					</div>
+					
+					<div class="feed">
+						<div class="head">
+							<div class="user">
+								<div class="info">
+									<h2>Madale Mods</h2>
+									<small>07/03/2022</small>
+								</div>
+								
+								<!--<span class="edit">
+									<span class="iconify" data-icon="dashicons:ellipsis"></span>
+								</span>-->
+								<div>
+									<select id="settings" class="settings">
+										<option value="..." selected>...</option>
+										<option value="delete">Delete Post</option>
+										<option value="edit">Edit Post</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						
+						<div class="caption">
+							<p class="message">
+								Growtopia is a free-to-play sandbox MMO game with almost endless possibilities for world creation, customization and having fun with your friends. Enjoy thousands of items, challenges and events. 
+							</p>
+						</div>
+						
+						<div class="photo">
+							<img src="/images/tnc.jpg">
+						</div>
+						
+						<div class="action-button">
+							<div class="interaction-buttons">
+								<a href="#"><span class="iconify" data-icon="carbon:tree" data-width="30" data-height="30"></span></a>
+								<a href="#" id="button" onClick="action()"><span class="iconify" data-icon="ion:trail-sign-outline" data-width="30" data-height="30"></span></a>
+							</div>
+						</div>
+						
+						<div class="fertilized"><p>12 Fertilized Seed</p></div>
+						<div class="comments text-muted"><a href="#" id="comment2" onClick="showComments('comment2')">View all 33 comments</a></div>
+					</div>
+				</div>
+			</div>
+
+			<!--RIGHT PART-->
+			<div class="right">
+				<div class="show">
+					<div class="heading">
+						<h2>Comments</h2>
+					</div>
+
+					<div class="comment-bar">
+						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
+						<p>Ghosts exists now in the game!? Cool!!!</p>
+						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
+						<p>Ghosts exists now in the game!? Cool!!!</p>
+						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
+						<p>Ghosts exists now in the game!? Cool!!!</p>
+						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
+						<p>Ghosts exists now in the game!? Cool!!!</p>
+						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
+						<p>Ghosts exists now in the game!? Cool!!!</p>
+						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
+						<p>Ghosts exists now in the game!? Cool!!!</p>
+						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
+						<p>Ghosts exists now in the game!? Cool!!!</p>
+						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
+						<p>Ghosts exists now in the game!? Cool!!!</p>
+						<p>I'm a growtopian since 2020 and I can say a lot of things had changed in the game.</p>
+						<p>Ghosts exists now in the game!? Cool!!!</p>
+					</div>
+
+				</div>
+			</div>
+			
+	</main>
+
+	<div class="add-comment">
+		<div class="popup">
+			<a href="#" class="close" onClick="closing()"><span class="iconify" data-icon="eva:close-fill"></span></a>
+			<form class="create-comment">
+				<textarea type="text" placeholder="Splice a thought"></textarea>
+				<input type="submit" value="Comment" class="splice">
+			</form>
+		</div>
+	</div>
+
+	/*SEARCH BAR*/
+
+	/*FILTER*/
+	<div>
+		<p><strong>Filter</strong></p>
+		<select id="filter">
+			<option value="all" selected>All</option>
+			<option value="blocks">Blocks</option>
+			<option value="seeds">Seeds</option>
+			<option value="head">Head</option>
+			<option value="torso">Tprso</option>
+			<option value="legs">Legs</option>
+			<option value="shoes">Shoes</option>
+			<option value="food">Food</option>
+			<option value="potions">Potions</option>
+			<option value="tools">Tools</option>
+			<option value="farming">Farming</option>
+			<option value="fishing">Fishing</option>
+			<option value="startopia">Startopia</option>
+			<option value="surgery">Surgery</option>
+		</select>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+body{
+	font-family: 'Courier New';
+}
+
+.login{
+	padding-bottom: 30px;
+	width: 350px;
+	height: 430px;
+	background-color: teal;
+	margin: auto;
+	border-radius: 12px;
+	opacity: 0.8;
+}
+
+.heading{
+	text-align: center;
+	padding-top: 30px;
+	font-size: large;
+}
+
+img{
+	width:150px;
+	height:150px;
+}
+
+form{
+	width: 300px;
+	margin-left: 20px;
+}
+
+form label{
+	display: flex;
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+form input{
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border: 1px solid lightgray;
+	border-radius: 6px;
+	outline: none;
+}
+
+input[type="submit"]{
+	width: 300px;
+	height: 35px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border: none;
+	background-color: #49c1a2;
+	color: white;
+	font-size: 18px;
+}
+
+input[type="submit"]:hover{
+	background-color: black;
+}
+
+
+p{
+	text-align: center;
+	padding-top: 5px;
+	font-size: 15px;
+}
+
+.p2{
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	margin-top: -3px;
+}
+
+.p2 a{
+	color: #49c1a2;
+}
