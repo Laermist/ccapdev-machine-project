@@ -20,13 +20,25 @@ const controller = {
     },
 
     getMain: function(req, res) {
-        db.findMany(PostModel, {}, 'userID content date likes comments', function (result) {
+        db.findMany(PostModel, {}, 'userID username content date likes comments', function (result) {
             if(result)
 			{
                 console.log('Loading posts.');
                 console.log(result);
                 //res.render('../views/partials/feed',{userID:result.user, content:result.content, date:result.date, likes:result.likes, comments:result.comments});
-                res.render('Main',{"Posts": result}); // This is to load the page initially
+                db.findMany(CommentModel, {}, 'commentID userID username postID content', function (result2) {
+                    if(result2)
+                    {
+                        console.log('Loading comments.');
+                        console.log(result2);
+                        res.render('Main',{"Session": req,"Posts": result,"Comments": result2,}); // This is to load the page initially
+                    }
+                    else
+                    {
+                        res.render('Main');
+                    }
+                });
+                
             }
 			else
 			{
@@ -113,11 +125,28 @@ const controller = {
 
     getAdd: function(req, res) {
         // your code here
-		var post = { user: req.query.user, content: req.query.content, date: req.query.date, likes: req.query.likes, comments: req.query.comments}
-        db.insertOne(PostModel, post, function(result)
-		{
-            res.render('../views/partials/feed',{user:post.user, content:post.content, date:post.date, likes:post.likes, comments:post.comments});
-        });
+        PostModel.findOne({}, {}, function(error, result) {
+            var max_id = 0;
+                if(result){
+                    max_id=result.postID +1;
+                }
+                var post = {
+                    postID: max_id + userID*10000,
+                    userID: req.query.userID,
+                    username: req.query.username,
+                    content: req.query.content,
+                    date: req.query.date,
+                    category: req.query.category,
+                    likes: req.query.likes,
+                    comments: req.query.comments
+                }
+                db.insertOne(PostModel, post, function(result)
+                {
+                    res.send(result);
+                });
+            }).catch(err=>{
+                console.log(err)
+         }).sort({userID:-1}).limit(1);
     },
 
     getDelete: function (req, res) {
