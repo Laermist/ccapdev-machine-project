@@ -21,7 +21,7 @@ const controller = {
 
     getMain: function(req, res) {
         db.findMany(PostModel, {}, 'userID content date likes comments', function (result) {
-            if(result != null)
+            if(result)
 			{
                 console.log('Loading posts.');
                 console.log(result);
@@ -83,6 +83,7 @@ const controller = {
     },
 
     getAcc: function(req,res) {
+        var user = null;
         db.findOne(UserModel, {email: req.query.email}, 'name email pword', function (result)
 		{
             if(result)
@@ -90,17 +91,21 @@ const controller = {
                 bcrypt.compare(req.query.pword, result.pword, function(err,result2){
                     if(result2)
                     {
-                        console.log(result.name);
+                        user = {name:result.name, email:result.email};
+                        req.session.user = user;
+                        console.log(req.session);       // remove later on, for debugging purposes only
                         res.send({message:"success",name:result.name});
                     }
                     else
                     {
+                        req.session.user = user;
                         res.send({message:"incorrect"});
                     }
                 });
             }
             else
             {
+                req.session.user = user;
                 res.send({message:"non-existing"});
             }
         });
